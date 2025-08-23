@@ -106,7 +106,7 @@ app.use("/",userRouter);
 
 
 app.use((req, res, next) => {
-    next(new Expresserror(404, "Page Not Found"));
+    res.redirect("/listings");
 });
 
 
