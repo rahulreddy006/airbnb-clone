@@ -1,0 +1,60 @@
+<% layout('/layouts/boilerplate') -%>
+
+<body>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h3>Edit the Listing</h3>
+    <form method="post" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data">
+
+        <div class="mb-3 mt-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" value="<%= listing.title %>" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" name="listing[description]" value="<%= listing.description %>" class="form-control" required>
+
+
+        </div>
+
+        <div class="mb-3">
+            Original Image  <br>
+            <img src="<%= originalImage %>" alt="" style="height: 8rem; width: 15rem;">
+        </div>
+
+        <div class="mb-3">
+            <label for="title" class="form-label">Update new image</label>
+            <input type="file" name="listing[image]" value="<%= listing.image.url %>" class="form-control" >
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-4">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" name="listing[price]" value="<%= listing.price %>" class="form-control" required>
+           </div>
+
+           <div class="mb-3 col-8">
+            <label for="copuntry" class="form-label">Country</label>
+            <input type="text" name="listing[country]" value="<%= listing.country %>" class="form-control" required>
+           </div>
+
+        </div>
+
+        
+
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listing[location]" value="<%= listing.location %>" class="form-control" required>
+        </div>
+
+
+        
+
+        <button class="btn btn-dark addi mt-3">edit</button>
+
+    </form>
+   </div>
+  </div>
+</body>
