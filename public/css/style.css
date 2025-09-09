@@ -7,7 +7,18 @@
 
 @media (max-width:750px) {
     .navbar-collapse.show {
-        background-color: #fe424d;;
+        background-color: #fe424d;
+
+    }
+
+    .navbar-collapse.show.form-control {
+        display: none !important;
+           
+    }
+
+    .navbar-collapse.show.btn-search {
+        display: none !important;
+          
     }
 }
 
