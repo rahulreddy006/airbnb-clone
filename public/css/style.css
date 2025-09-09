@@ -5,6 +5,12 @@
 
 }
 
+@media (max-width:750px) {
+    .navbar-collapse.show {
+        background-color: #fe424d;;
+    }
+}
+
 body {
     display: flex;
     flex-direction:column;
